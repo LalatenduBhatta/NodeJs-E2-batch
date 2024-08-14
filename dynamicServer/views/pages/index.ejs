@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <%- include("../partials/navbar") -%>
+        <h1>Welcome to Template Engine (EJS)</h1>
+        <h2>This is home page</h2>
+        <a href="/about">ABOUT</a>
+
+        <h3>name:<%- name %></h3>
+        <h3>age:<%- age %></h3>
+        <h3>address:<%- address %></h3>
+
+        <%- include("../partials/footer") -%>
+</body>
+
+</html>`
