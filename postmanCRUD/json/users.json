@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Vicky",
+        "age": "25",
+        "address": "Odisha",
+        "mobile": "9692658714"
+    },
+    {
+        "name": "Rohit",
+        "age": "35",
+        "address": "Maharastra",
+        "mobile": "9791546865"
+    },
+    {
+        "name": "Virat",
+        "age": "34",
+        "address": "Delhi",
+        "mobile": "7955486546"
+    }
+]
