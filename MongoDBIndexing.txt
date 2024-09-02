@@ -1,0 +1,19 @@
+Indexing in MongoDB improves the performance of queries by allowing the database to quickly locate the necessary data without having to scan every document in a collection. Indexes store a small portion of the collection’s data in a sorted order, making searches faster and more efficient.
+
+Indexes are special data structures that store information about the documents in a way that makes it easier for MongoDB to quickly locate the right data.
+
+Creating an Index:-------
+MongoDB provides a method called createIndex() that allows users to create an index. 
+Syntax: 
+db.collectionName.createIndex({KEY:1}) 
+1 refers to the ascending order while -1 is for descending order indexing
+
+Droping an Index:-------
+syntax:
+1)db.collectionName.dropIndex({KEY:indexType}) //to drop a specific field
+2)db.collectionName.dropIndexes()  //to drop all except _id
+
+
+Getting the Indexes:----
+syntax:
+db.collectionName.getIndexes() //return all the indexes with its types

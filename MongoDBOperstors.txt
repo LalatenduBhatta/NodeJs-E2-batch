@@ -1,0 +1,87 @@
+1. Comparison Operators
+$eq: Matches values that are equal to a specified value.
+$gt: Matches values that are greater than a specified value.
+$gte: Matches values that are greater than or equal to a specified value.
+$in: Matches any of the values specified in an array.
+$lt: Matches values that are less than a specified value.
+$lte: Matches values that are less than or equal to a specified value.
+$ne: Matches all values that are not equal to a specified value.
+$nin: Matches none of the values specified in an array.
+2. Logical Operators
+$and: Joins query clauses with a logical AND, returns all documents that match the conditions of both clauses.
+$or: Joins query clauses with a logical OR, returns all documents that match the conditions of at least one clause.
+$not: Inverts the effect of a query expression.
+$nor: Joins query clauses with a logical NOR, returns all documents that fail to match both clauses.
+3. Element Operators
+$exists: Matches documents that have the specified field.
+$type: Selects documents if a field is of the specified type.
+4. Evaluation Operators
+$expr: Allows the use of aggregation expressions within the query language.
+$jsonSchema: Validates documents against the given JSON Schema.
+$mod: Performs a modulo operation on the value of a field and selects documents with a specified result.
+$regex: Selects documents where values match a specified regular expression.
+$text: Performs text search.
+$where: Matches documents that satisfy a JavaScript expression.
+5. Array Operators
+$all: Matches arrays that contain all elements specified in the query.
+$elemMatch: Selects documents if an element in the array field matches all the specified query criteria.
+$size: Selects documents if the array field is a specified size.
+6. Bitwise Operators
+$bitsAllClear: Matches numeric or binary values where a set of bit positions are all clear (i.e., 0).
+$bitsAllSet: Matches numeric or binary values where a set of bit positions are all set (i.e., 1).
+$bitsAnyClear: Matches numeric or binary values where any bit from a set of bit positions is clear.
+$bitsAnySet: Matches numeric or binary values where any bit from a set of bit positions is set.
+7. Geospatial Operators
+$geoIntersects: Selects geometries that intersect with a GeoJSON geometry.
+$geoWithin: Selects geometries within a bounding GeoJSON geometry.
+$near: Returns documents sorted by distance to a point.
+$nearSphere: Similar to $near, but calculates distances using spherical geometry.
+8. Projection Operators
+$: Projects the first matching element from an array.
+$elemMatch: Projects only the first element from an array that matches the specified $elemMatch condition.
+$meta: Projects the document's score assigned during text search.
+$slice: Limits the number of elements projected from an array.
+9. Update Operators
+Field Update Operators:
+$currentDate: Sets the value of a field to the current date.
+$inc: Increments the value of a field by a specified amount.
+$min: Only updates the field if the specified value is less than the existing field value.
+$max: Only updates the field if the specified value is greater than the existing field value.
+$mul: Multiplies the value of the field by the specified amount.
+$rename: Renames a field.
+$set: Sets the value of a field.
+$setOnInsert: Sets the value of a field upon document creation during an upsert.
+$unset: Removes the specified field from a document.
+Array Update Operators:
+$addToSet: Adds elements to an array only if they do not already exist in the array.
+$pop: Removes the first or last element of an array.
+$pull: Removes all array elements that match a specified query.
+$push: Adds an element to an array.
+$pullAll: Removes all matching values from an array.
+Positional Update Operators:
+$: Acts as a placeholder to update the first element that matches the query condition.
+$[]: Applies the update to all array elements.
+$[<identifier>]: Applies the update to the array elements that match the specified filter.
+10. Aggregation Operators
+$addFields: Adds new fields to documents.
+$bucket: Categorizes documents into groups, called buckets, based on a specified expression.
+$bucketAuto: Automatically categorizes documents into a specified number of buckets.
+$count: Returns a count of the number of documents at this stage of the pipeline.
+$facet: Processes multiple aggregation pipelines within a single stage.
+$group: Groups input documents by a specified identifier expression and applies the accumulator expressions.
+$limit: Limits the number of documents passed to the next stage in the pipeline.
+$lookup: Performs a left outer join to another collection in the same database.
+$match: Filters the documents to pass only the documents that match the specified condition(s).
+$out: Writes the resulting documents of the aggregation pipeline to a specified collection.
+$project: Reshapes each document in the stream by adding, removing, or renaming fields.
+$replaceRoot: Replaces the input document with the specified document.
+$replaceWith: Replaces the input document with the specified document.
+$sample: Randomly selects the specified number of documents from its input.
+$skip: Skips over the specified number of documents.
+$sort: Sorts all input documents and returns them to the next stage in the pipeline.
+$unwind: Deconstructs an array field from the input documents to output a document for each element.
+11. Miscellaneous Operators
+$comment: Attaches a comment to a query.
+$indexStats: Returns statistics about the use of each index.
+$planCacheClear: Removes all cached query plans for a collection.
+$planCacheClearFilters: Clears plans from the cache associated with specified query shapes.
