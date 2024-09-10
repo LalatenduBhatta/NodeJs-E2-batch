@@ -21,6 +21,6 @@ userRouter.get("/get/:name", getUserByName)//http:127.0.0.5:5000/user/get/(name)
 userRouter.delete("/delete/:name", deleteUser) //http:127.0.0.5:5000/user/delete/(name)
 
 //updateAPI(update user)
-userRouter.put("/update", updateUser) //http:127.0.0.5:5000/user/update(query)
+userRouter.put("/update", updateUser) //http:127.0.0.5:5000/user/update(query)?key=value
 
 module.exports = { userRouter }
